@@ -19,3 +19,10 @@ npm i
 npm start
 
 
+production
+// client
+https://client-side-partner.herokuapp.com/
+
+
+
+
