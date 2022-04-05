@@ -15,9 +15,19 @@ npm start
 
 cd partnerserver
 
-npm i 
-npm start
+npm i
+//
+npm run build
 
+//
+npm start 
+
+"scripts": {
+    "build": "tsc",
+    "start": "concurrently \"tsc -w\" \"nodemon dist/js/app.js\""
+}
+
+////////////////////////////////////////////////////////////////////////////////////////
 
 production
 // client
