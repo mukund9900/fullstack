@@ -8,7 +8,7 @@ const dataLong:number = -0.142571;
 
 
 const getPartnerDetails = async function (){
-    return await Partner.find().select('id organization offices').lean();
+    return await Partner.find().select('id organization offices').sort({"organization": 1}).lean();
 }
 interface IPartnercardDetails {
     company: string,
@@ -108,6 +108,7 @@ export const fetchPartnersWithInKmRange = async (req: Request, res: Response): P
 
     }
     catch(e){
-
+        console.log(e);
+        return;
     }
 }

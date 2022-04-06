@@ -2,16 +2,15 @@ import express, { Express } from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
 import appRoutes from './routes'
-
 const app: Express = express()
 
 const PORT: string | number = process.env.PORT || 4000
 var bodyParser = require('body-parser')
 
+app.use(express.static("public"));
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
-
 // parse application/json
 app.use(bodyParser.json())
 
